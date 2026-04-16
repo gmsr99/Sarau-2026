@@ -333,16 +333,54 @@ button {
   font-style: italic;
 }
 
+.musica-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.musica-alt-row {
+  margin-top: 6px;
+}
+
 .musica-principal {
   font-size: 0.84rem;
   color: #0d5c54;
   line-height: 1.5;
+  flex: 1;
 }
 
 .musica-alt {
   font-size: 0.74rem;
   color: #4a8a84;
-  margin-top: 4px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.yt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0000;
+  opacity: 0.75;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: opacity 0.15s, transform 0.15s;
+  text-decoration: none;
+}
+
+.yt-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.yt-btn--sm {
+  transform: scale(0.85);
+  transform-origin: top left;
+}
+
+.yt-btn--sm:hover {
+  transform: scale(0.95);
 }
 
 /* ── MAPA DE CENAS ───────────────────────────────────── */

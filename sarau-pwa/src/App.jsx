@@ -33,6 +33,14 @@ function NoteIcon() {
   )
 }
 
+function YtIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/>
+    </svg>
+  )
+}
+
 function SceneCard({ scene, accentColor }) {
   const [open, setOpen] = useState(false)
 
@@ -71,9 +79,23 @@ function SceneCard({ scene, accentColor }) {
               <NoteIcon />
               <span>Referência Musical</span>
             </div>
-            <p className="musica-principal">{scene.musica}</p>
+            <div className="musica-row">
+              <p className="musica-principal">{scene.musica}</p>
+              {scene.musicaUrl && (
+                <a href={scene.musicaUrl} target="_blank" rel="noopener noreferrer" className="yt-btn" title="Pesquisar no YouTube">
+                  <YtIcon />
+                </a>
+              )}
+            </div>
             {scene.musicaAlt && (
-              <p className="musica-alt">Alternativa: {scene.musicaAlt}</p>
+              <div className="musica-row musica-alt-row">
+                <p className="musica-alt">Alt: {scene.musicaAlt}</p>
+                {scene.musicaAltUrl && (
+                  <a href={scene.musicaAltUrl} target="_blank" rel="noopener noreferrer" className="yt-btn yt-btn--sm" title="Pesquisar no YouTube">
+                    <YtIcon />
+                  </a>
+                )}
+              </div>
             )}
           </div>
         </div>
