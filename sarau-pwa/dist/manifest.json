@@ -1,0 +1,18 @@
+{
+  "name": "Sarau 2026 — Utopia",
+  "short_name": "Sarau 2026",
+  "description": "Proposta de espetáculo narrativo — Clube de Ginástica dos Bombeiros das Caldas da Rainha",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0f1623",
+  "theme_color": "#111827",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icon-192.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
